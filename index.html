@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#090a0c" />
+    <meta name="description" content="Asphera Analyzer compares measured profiles with nominal aspheric surfaces, evaluates form error, and supports diffraction and profile processing." />
+    <title>Asphera Analyzer — Surface Form Analysis</title>
+    <link rel="icon" type="image/x-icon" href="assets/asphera-analyzer.ico" />
+    <link rel="preload" as="image" href="assets/asphera-logo-transparent.png" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="site.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <div class="header-inner">
+        <div class="brand-group">
+          <a class="brand" href="#top" aria-label="Asphera Analyzer — back to top">
+            <img src="assets/asphera-logo-transparent.png" alt="" />
+            <span class="brand-name">ASPHERA<span>ANALYZER</span></span>
+          </a>
+          <a class="dtm-brand" href="https://dtm-studio.org/" target="_blank" rel="noopener noreferrer" aria-label="DTM Studio website, opens in a new tab">
+            <img src="https://dtm-studio.org/assets/dtmlogo.webp" alt="DTM Studio" width="220" height="100" />
+          </a>
+        </div>
+        <nav class="main-nav" id="main-nav" aria-label="Main navigation">
+          <a href="#product" aria-current="location">Overview</a>
+          <a href="#views">Analysis</a>
+          <a href="#tools">Tools</a>
+          <a href="#exports">Exports</a>
+        </nav>
+        <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="main-nav">
+          <span></span><span></span>
+        </button>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="hero" id="top" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="eyebrow-mark"></span> Surface form analysis</p>
+          <h1 id="hero-title">A profile is<br /><em>the starting point.</em></h1>
+          <p class="hero-lede">
+            Asphera Analyzer compares a measured profile with a nominal aspheric surface
+            and helps show how the form error takes shape.
+          </p>
+          <a class="text-link" href="#product">Explore the analysis <span aria-hidden="true">↘</span></a>
+          <div class="hero-footnote">
+            <span class="status-dot" aria-hidden="true"></span>
+            <span>Every analysis starts from a measured .PRF profile</span>
+          </div>
+        </div>
+        <div class="hero-emblem" aria-label="Original Asphera Analyzer mark">
+          <div class="emblem-halo" aria-hidden="true"></div>
+          <img src="assets/asphera-logo-transparent.png" alt="Asphera logo" />
+          <span class="emblem-coordinate">A / 01</span>
+          <span class="emblem-caption">FORM · MEASUREMENT · ANALYSIS</span>
+        </div>
+        <div class="hero-index" aria-hidden="true">ASPHERA <span>—</span> SURFACE ANALYSIS</div>
+      </section>
+
+      <section class="product-overview" id="product" aria-label="Asphera Analyzer overview screen">
+        <figure class="capture capture-overview" data-capture="overview">
+          <img class="capture-image" src="screen/aspheric.png" alt="Asphera Analyzer showing a loaded profile, Form Error (Radius Optimised), surface settings, and Best Fit Radius results." />
+          <figcaption>Loaded profile · Form Error (Radius Optimised) · Best Fit Radius</figcaption>
+        </figure>
+        <div class="overview-caption">
+          <p class="eyebrow">Surface Form Analysis</p>
+          <h2>Compare measured form<br /><em>with its model.</em></h2>
+          <p>Load a .PRF profile with its surface design, then inspect the residual and PV/RMS metrics. Best Fit Radius evaluates the residual across a configured radius range.</p>
+          <div class="model-note">
+            <span class="card-kicker">ASPHERIC DESIGN</span>
+            <p>Set radius, conic constant, clear aperture, orientation, and supported asphere coefficients in the nominal surface model.</p>
+          </div>
+        </div>
+      </section>
+
+      <div class="signal-strip" aria-label="Core analysis stages">
+        <span>.PRF <b>measurement</b></span><i aria-hidden="true">/</i>
+        <span>R · K · Aₙ <b>nominal surface</b></span><i aria-hidden="true">/</i>
+        <span>PV · RMS <b>form residual</b></span>
+      </div>
+
+      <section class="feature-list" id="views" aria-label="Product analysis screens">
+        <article class="feature-row" aria-labelledby="diffraction-title">
+          <figure class="capture" data-capture="diffraction">
+            <img class="capture-image" src="screen/diffraction.png" alt="Asphera Analyzer showing a measured form profile with detected diffraction zones and the zone analysis tab." />
+            <figcaption>Diffraction Analysis · detected zones and half-diameter comparison</figcaption>
+          </figure>
+          <div class="feature-copy">
+            <p class="eyebrow">02 / Zone analysis</p>
+            <h2 id="diffraction-title">Diffraction<br /><em>Analysis</em></h2>
+            <p>Load a .diff configuration and analyse transitions against the measured profile. The zone view marks the detected bands and reports nominal-to-measured half-diameter differences.</p>
+            <div class="detail-line"><span>CONFIGURATION</span><b>.diff parameters and coefficients</b></div>
+            <div class="detail-line"><span>READOUT</span><b>Detected zones · Δ half-diameter</b></div>
+          </div>
+        </article>
+
+        <article class="feature-row feature-row-reverse" aria-labelledby="compensation-title">
+          <figure class="capture" data-capture="compensation">
+            <img class="capture-image" src="screen/zone_exclude_and_error_compensation.png" alt="Asphera Analyzer with the Error Compensation view, profile residual, excluded ranges, and compensation results." />
+            <figcaption>Error Compensation · residual, excluded ranges, and fit result</figcaption>
+          </figure>
+          <div class="feature-copy">
+            <p class="eyebrow">03 / Residual fitting</p>
+            <h2 id="compensation-title">Error<br /><em>Compensation</em></h2>
+            <p>Fit X offset and tilt, then review the compensation result against the measured residual. Excluded ranges remain visible in the plot and are omitted from applicable metrics.</p>
+            <div class="detail-line"><span>FITTED TERMS</span><b>X offset · tilt</b></div>
+            <div class="detail-line"><span>EXCLUDED AREAS</span><b>Selected ranges · retained in profile context</b></div>
+          </div>
+        </article>
+      </section>
+
+      <section class="tools-section" id="tools" aria-labelledby="tools-title">
+        <div class="tools-heading">
+          <div><p class="eyebrow">Processing tools</p><h2 id="tools-title">Profile<br /><em>processing.</em></h2></div>
+          <p>Filter, reconstruct, and fit the profile while keeping raw measurements and the ordinary Form Error available as distinct states.</p>
+        </div>
+        <div class="tool-grid">
+          <article class="tool-card">
+            <span class="card-kicker">01 / LOCAL EVENTS</span>
+            <h3>Spike Removal</h3>
+            <p>Detect narrow events by width and noise threshold. Reconstructed and unresolved events remain distinguishable in the processed profile.</p>
+          </article>
+          <article class="tool-card">
+            <span class="card-kicker">02 / SPATIAL FILTER</span>
+            <h3>Lambda‑S</h3>
+            <p>Apply an optional Gaussian filter with a configurable cutoff length. Inspect the filtered state and its metrics separately.</p>
+          </article>
+          <article class="tool-card compensation-card">
+            <span class="card-kicker">03 / FORM FIT</span>
+            <h3>Error Compensation</h3>
+            <p>Fit X offset and tilt, then compare the starting and optimised residuals.</p>
+          </article>
+        </div>
+        <div class="support-strip">
+          <div><b>Best Fit Radius</b><span>Search a configured radius range using RMS.</span></div>
+          <div><b>Excluded Areas</b><span>Exclude selected ranges from applicable metrics while keeping their profile context visible.</span></div>
+          <div><b>Profile states</b><span>Raw · aligned · residual · modified</span></div>
+        </div>
+      </section>
+
+      <section class="exports" id="exports" aria-labelledby="exports-title">
+        <div class="exports-intro"><p class="eyebrow">Analysis outputs</p><h2 id="exports-title">Export analysis<br /><em>results.</em></h2></div>
+        <div class="export-items">
+          <div><b>CSV</b><span>Raw · Aligned · Residual · Modified profiles</span></div>
+          <div><b>MOD</b><span>Modified Profile output</span></div>
+          <div><b>PDF</b><span>Analysis report, including diffraction results when available</span></div>
+        </div>
+        <a class="text-link" href="#top">Back to top <span aria-hidden="true">↑</span></a>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <a class="footer-brand" href="#top"><img src="assets/asphera-logo-square.png" alt="" /><span>ASPHERA ANALYZER</span></a>
+      <p>Profile measurement · nominal surface · form analysis</p>
+      <span class="footer-index">PROFILOMETRY / ANALYSIS</span>
+    </footer>
+  </body>
+</html>
